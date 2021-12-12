@@ -15,7 +15,7 @@ export default function FirstPost() {
         <main>
           <div className="title">
             <Image src="/profile.jpg" width="144" height="144" alt="Screenshot" />
-            <div className="title__bacl">
+            <div className="title__back">
               <Link href="/">Back to home</Link>
             </div>
           </div>
