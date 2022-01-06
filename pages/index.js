@@ -1,36 +1,25 @@
-import Head from 'next/head';
+import Link from 'next/link';
 import Layout from '../components/layout';
-import { getSortedPostsData } from '../lib/posts';
-import utilStyles from '../styles/utils.module.scss';
 
-export default function Home({ allPostsData }) {
+export default function Home({ posts }) {
   return (
     <div className="container">
       <Layout home>
-        <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-          <h2 className={utilStyles.headingLg}>Blog</h2>
-          <ul className={utilStyles.list}>
-            {allPostsData.map(({ id, date, title }) => (
-              <li className={utilStyles.listItem} key={id}>
-                {title}
-                <br />
-                {id}
-                <br />
-                {date}
-              </li>
-            ))}
-          </ul>
+        <section>
+          { posts.map((post) => (
+            <div className="card" key={post.id}>
+              <Link href={`/posts/${post.id}`}>{ post.title }</Link>
+              <span className="card__desc">{post.body}</span>
+            </div>
+          )) }
         </section>
       </Layout>
     </div>
   );
 }
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    },
-  };
+export async function getServerSideProps() {
+  const posts = await (await fetch('https://jsonplaceholder.typicode.com/posts')).json();
+
+  return { props: { posts } };
 }
