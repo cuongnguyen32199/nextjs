@@ -44,7 +44,7 @@ export default function About() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by <Image src="/vercel.svg" alt="Vercel" className="logo" />
+          Powered by <Image src="/vercel.svg" width={283} height={64} alt="Vercel" className="logo" />
         </a>
       </footer>
     </div>
