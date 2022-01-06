@@ -1,4 +1,5 @@
-import Head from "next/head";
+import Head from 'next/head';
+import Image from 'next/image';
 
 export default function About() {
   return (
@@ -43,7 +44,7 @@ export default function About() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by <img src="/vercel.svg" alt="Vercel" className="logo" />
+          Powered by <Image src="/vercel.svg" alt="Vercel" className="logo" />
         </a>
       </footer>
     </div>

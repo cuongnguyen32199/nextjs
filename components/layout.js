@@ -6,7 +6,7 @@ import styles from './layout.module.scss';
 import utilStyles from '../styles/utils.module.scss';
 
 const name = 'Nguyen Manh Cuong';
-export const siteTitle = 'Next.js Sample Website';
+export const siteTitle = 'Next.js';
 
 export default function Layout({ children, home }) {
   return (
@@ -23,8 +23,12 @@ export default function Layout({ children, home }) {
             siteTitle
           )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
         />
+        <title>{siteTitle}</title>
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
       </Head>
       <header className={styles.header}>
         {home ? (
