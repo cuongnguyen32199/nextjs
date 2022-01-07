@@ -10,3 +10,50 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.navigator {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid lightblue;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  background-color: lightblue;
+
+  & > * {
+    margin-right: 0.5rem;
+  }
+
+  & > a {
+    padding: 0.1rem 0.5rem;
+    text-decoration: none;
+    border: 1px solid #0070f3;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      color: #fff;
+      background-color: #0070f3;
+      border-color: #0070f3;
+    }
+  }
+}
+
+.link {
+  &__active {
+    color: #fff;
+    background-color: #0070f3;
+    border-color: #0070f3;
+  }
+}
+
+.link {
+  color: #fff;
+  background-color: #0070f3;
+  border-color: #0070f3;
+}
