@@ -8,7 +8,7 @@ export default function Home({ posts }) {
   return (
     <div className="container">
       <Layout home>
-        <section>
+        <section className='card-container'>
           { posts.map((post) => (
             <div className="card" key={post.id} onClick={() => router.push(`/posts/${post.id}`)}>
               <Link href={`/posts/${post.id}`}>{ post.title }</Link>

@@ -1,59 +1,50 @@
 .container {
-  max-width: 36rem;
-  padding: 1rem;
   margin: 0 auto;
   min-height: 100vh;
+  width: 90vw;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .navigator {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
   border: 1px solid lightblue;
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
   background-color: lightblue;
+  height: 50px;
 
   & > * {
-    margin-right: 0.5rem;
+    margin-right: 5rem;
   }
 
   & > a {
-    padding: 0.1rem 0.5rem;
-    text-decoration: none;
-    border: 1px solid #0070f3;
-    border-radius: 0.25rem;
     transition: all 0.3s ease-in-out;
-    background-color: #fff;
     text-transform: uppercase;
-
-    &:hover,
-    &:focus,
-    &:active,
-    &.active {
-      color: #fff;
-      background-color: #0070f3;
-      border-color: #0070f3;
-    }
   }
 }
 
 .link {
   &__active {
     color: #fff;
-    background-color: #0070f3;
-    border-color: #0070f3;
+    background-color: var(--blue);
+    border-color: var(--blue);
   }
 }
 
 .link {
   color: #fff;
-  background-color: #0070f3;
-  border-color: #0070f3;
+  background-color: var(--blue);
+  border-color: var(--blue);
 }

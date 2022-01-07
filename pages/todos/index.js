@@ -30,7 +30,7 @@ export default function Todo({ todos, page, totalPage }) {
           ))}
         </div>
       </div>
-      <div className={styles.stats}>Page: {page}</div>
+      <div className={styles.stats}>Page: {page} / {totalPage}</div>
 
       <div className={styles.pagination}>
         <div className={styles.pagination__previous}>
