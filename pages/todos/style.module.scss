@@ -1,0 +1,47 @@
+.todos {
+  width: 40vw;
+
+  &__title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+}
+
+.todo {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 100;
+  text-transform: capitalize;
+  padding: 0.25rem;
+  border: 1px solid lightgrey;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+
+  &__title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__status {
+    flex-basis: 100px;
+    text-align: end;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+
+  &__previous {
+    margin-right: 5px;
+  }
+}
+
+.stats {
+  display: flex;
+  font-size: 12px;
+}
