@@ -7,7 +7,6 @@ import styles from './layout.module.scss';
 export default function Layout({ children, home }) {
   const router = useRouter();
   const { pathname } = router;
-  console.log({ pathname });
 
   return (
     <div className={styles.container}>
@@ -20,8 +19,12 @@ export default function Layout({ children, home }) {
       </Head>
       <header className={styles.header}>
         <div className={styles.navigator}>
-          <Link href="/" className={pathname == '/' ? styles.link__active : ''}>Home</Link>
-          <Link href="/todos" className={pathname == '/todos' ? styles.link__active : ''}>Todo</Link>
+          <Link href="/" className={pathname === '/' ? styles.link__active : ''}>
+            Home
+          </Link>
+          <Link href="/todos" className={pathname === '/todos' ? styles.link__active : ''}>
+            Todo
+          </Link>
         </div>
       </header>
       <main>{children}</main>
