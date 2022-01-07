@@ -12,7 +12,7 @@ export default function Todo({ todos, page, totalPage }) {
     if (page) return;
 
     router.push('?page=1', undefined, { shallow: true });
-  }, []);
+  }, [router]);
 
   const goPrevious = () => router.push({ query: { page: +page - 1 } });
   const goNext = () => router.push({ query: { page: +page + 1 } });
